@@ -4,7 +4,7 @@
   <groupId>lasselle</groupId>
   <artifactId>jiblWebappTest</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.4.-SNAPSHOT</version>
   <name>jiblWebappTest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
@@ -45,12 +45,15 @@
 					</goals>
 					<configuration>
 						<nom-conteneur-docker>ciblededeploiement-composant-srv-jee</nom-conteneur-docker>
-						<ip-cible>192.168.1.173</ip-cible>
+						<ip-cible>192.168.1.149</ip-cible>
+						<no-port-srv-jee-cible>19345</no-port-srv-jee-cible>
 						<lx-user>lauriane</lx-user>
 						<lx-pwd>lauriane</lx-pwd>
 						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
+						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
+						
 						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>********</git-userpwd>
+						<git-userpwd>***********</git-userpwd>
 					</configuration>
 				</execution>
 			</executions>
