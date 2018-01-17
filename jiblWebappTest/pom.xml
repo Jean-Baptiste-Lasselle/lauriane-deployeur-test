@@ -44,9 +44,13 @@
 						<goal>deploie</goal>
 					</goals>
 					<configuration>
-						<ip-cible>192.168.1.152</ip-cible>
+						<nom-conteneur-docker>ciblededeploiement-composant-srv-jee</nom-conteneur-docker>
+						<ip-cible>192.168.1.173</ip-cible>
 						<lx-user>lauriane</lx-user>
 						<lx-pwd>lauriane</lx-pwd>
+						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
+						<git-username>Jean-Baptiste-Lasselle</git-username>
+						<git-userpwd>********</git-userpwd>
 					</configuration>
 				</execution>
 			</executions>
@@ -79,7 +83,7 @@
 							
 	<!-- 					<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile> -->
 	<!-- 					<manifestFile>src/main/resources/jibl/customMANIFEST.MF</manifestFile> -->
-	<!-- 						<manifestFile>src/main/resources/META-INF/customMANIFEST.MF</manifestFile> -->
+							<manifestFile>src/main/resources/META-INF/customMANIFEST.MF</manifestFile>
 		
 	
 					</archive>
