@@ -48,11 +48,20 @@
 						<!-- topologie de la cible de déploiement -->
 						
 						<!--  COMPOSANT SRV JEE -->
+						<!-- Cette configuration permet de définir quel est le 
+						     serveur jee dans lequel déployer le war buildé.
+						-->
 						<nom-conteneur-docker-srv-jee>ciblededeploiement-composant-srv-jee</nom-conteneur-docker-srv-jee>
 						<ip-cible-srv-jee>192.168.1.149</ip-cible-srv-jee>
 						<no-port-cible-srv-jee>19345</no-port-cible-srv-jee>
 						
 						<!--  COMPOSANT SGBDR -->
+						<!-- Cette configuration pourrait être utilisée pour mettre la BDD dans un état particulier, souhaité pour le déploiement
+						     puis laisser un script permettant de faire revenir la BDD dans son état initial, après la fin ds tests.
+						-->
+						<!-- Si le script de retour à l'état initial n'existe pas, il est créé en utilisant mysqldump -->
+						<!-- Si le script de retour à l'état initial existe, il est exécuté pour retour à l'état initial avant déploiement -->
+						
 <!-- 						<nom-conteneur-docker-sgbdr>ciblededeploiement-composant-sgbdr</nom-conteneur-docker-sgbdr> -->
 <!-- 						<ip-cible-sgbdr>192.168.1.149</ip-cible-sgbdr> -->
 <!-- 						<no-port-cible-sgbdr>4466</no-port-cible-sgbdr> -->
@@ -66,7 +75,7 @@
 						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
 						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
 						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>7siebenzunft</git-userpwd>
+						<git-userpwd>********************</git-userpwd>
 					</configuration>
 				</execution>
 			</executions>
