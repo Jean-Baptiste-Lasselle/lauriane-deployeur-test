@@ -9,5 +9,10 @@
 <h2>Je vérifie de plus</h2>
 <p>Que les re-déploiements sont bien effectifs au simple changement de code source de l'application, sans changer le numéro de version dans le pom.xml</p>
 <p>Dernier ajout de paragraphe juste pour tests dernier déploiement</p>
+<p>Aucun doute,c'est bien le dernier déploiement:</p>
+<p>
+version: 0.0.5-SNAPSHOT
+</p>
+
 </body>
 </html>

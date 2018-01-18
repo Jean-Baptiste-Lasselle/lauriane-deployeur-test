@@ -4,7 +4,7 @@
   <groupId>lasselle</groupId>
   <artifactId>jiblWebappTest</artifactId>
   <packaging>war</packaging>
-  <version>0.0.4-SNAPSHOT</version>
+  <version>0.0.5-SNAPSHOT</version>
   <name>jiblWebappTest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
@@ -53,7 +53,7 @@
 						-->
 						<nom-conteneur-docker-srv-jee>ciblededeploiement-composant-srv-jee</nom-conteneur-docker-srv-jee>
 						<ip-cible-srv-jee>192.168.1.149</ip-cible-srv-jee>
-						<no-port-cible-srv-jee>19345</no-port-cible-srv-jee>
+						<no-port-cible-srv-jee>12546</no-port-cible-srv-jee>
 						
 						<!--  COMPOSANT SGBDR -->
 						<!-- Cette configuration pourrait être utilisée pour mettre la BDD dans un état particulier, souhaité pour le déploiement
@@ -75,7 +75,14 @@
 						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
 						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
 						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>********************</git-userpwd>
+						<git-userpwd>**********************</git-userpwd>
+						<!-- 
+						vous devez choisir un répertoire qui pourra être librement utilisé par le plugin maven
+						 -->
+						<repertoire-repo-git-local>C:\moi\mes_repos_git\tempmvnautobuild2</repertoire-repo-git-local>
+<!-- 						<repertoire-repo-git-local>C:\\moi\\mes_repos_git\\tempmvnautobuild</repertoire-repo-git-local> -->
+<!-- 						<repertoire-repo-git-local>C:\\moi\\mes_repos_git/tempmvnautobuild</repertoire-repo-git-local> -->
+						
 					</configuration>
 				</execution>
 			</executions>
