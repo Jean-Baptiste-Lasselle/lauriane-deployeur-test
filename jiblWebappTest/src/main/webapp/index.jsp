@@ -11,7 +11,7 @@
 <p>Dernier ajout de paragraphe juste pour tests dernier déploiement</p>
 <p>Aucun doute,c'est bien le dernier déploiement:</p>
 <p>
-version: 0.0.8-SNAPSHOT
+version: 0.2.0-SNAPSHOT
 </p>
 <p>PADAAAAAAAAAAAAAAAAAAAm</p>
 <p>témoin déploiement</p>
