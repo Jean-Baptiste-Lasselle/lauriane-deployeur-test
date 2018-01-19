@@ -4,7 +4,7 @@
   <groupId>lasselle</groupId>
   <artifactId>jiblWebappTest</artifactId>
   <packaging>war</packaging>
-  <version>0.0.6-SNAPSHOT</version>
+  <version>0.0.7-SNAPSHOT</version>
   <name>jiblWebappTest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
@@ -83,7 +83,7 @@
 						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
 						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
 						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>***************************</git-userpwd>
+						<git-userpwd>7siebenzunft</git-userpwd>
 						<!-- 
 						vous devez choisir un répertoire qui pourra être librement utilisé par le plugin maven
 						 -->
