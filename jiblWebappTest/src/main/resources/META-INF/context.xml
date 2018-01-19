@@ -10,11 +10,11 @@
 	OF ANY KIND, either express or implied. See the License for the specific 
 	language governing permissions and limitations under the License. -->
 <!-- The contents of this file will be loaded for each web application -->
-<Context>
+<Context reloadable="true">
 
 	<!-- Default set of monitored resources. If one of these changes, the -->
 	<!-- web application will be reloaded. -->
-	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+<!-- 	<WatchedResource>WEB-INF/web.xml</WatchedResource> -->
 <!-- 	<WatchedResource>${catalina.base}/conf/web.xml</WatchedResource> -->
 
 	<!-- Uncomment this to disable session persistence across Tomcat restarts -->
@@ -27,9 +27,14 @@
 
 	<!-- CONFIGURATION DU DATACSOURCE -->
 <!-- 	<ResourceLink name="jdbc/JCGExampleDB" global="jdbc/JCGExampleDB" type="javax.sql.DataSource"/> -->
-	<ResourceLink name="jdbc/organisactionDS" global="jdbc/organisactionDS" type="javax.sql.DataSource"/>
-	
-<!-- 	<Resource name="jdbc/organisactionDS" auth="Container" -->
+<!-- 	<ResourceLink name="jdbc/organisactionDS" global="jdbc/organisactionDS" type="javax.sql.DataSource"/> -->
+
+		<Resource name="jdbc/organisactionDS2" auth="Container"
+		type="javax.sql.DataSource" maxTotal="20" maxIdle="10" maxWaitMillis="10000"
+		username="root" password="peuimporte" driverClassName="org.mariadb.jdbc.Driver"
+		url="jdbc:mariadb://192.168.1.149:8456/bdd_organisaction" />
+		
+<!-- 	<Resource name="jdbc/organisactionDS2" auth="Container" -->
 <!-- 		type="javax.sql.DataSource" initialSize="10" maxTotal="20" maxIdle="10" maxWaitMillis="10000" -->
 <!-- 		username="root" password="peuimporte" driverClassName="org.mariadb.jdbc.Driver" -->
 <!-- 		url="jdbc:mariadb://192.168.1.149:8456/bdd_organisaction" /> -->

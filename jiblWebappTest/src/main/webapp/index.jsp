@@ -11,7 +11,7 @@
 <p>Dernier ajout de paragraphe juste pour tests dernier déploiement</p>
 <p>Aucun doute,c'est bien le dernier déploiement:</p>
 <p>
-version: 0.2.0-SNAPSHOT
+version: 0.5.0-SNAPSHOT
 </p>
 <p>PADAAAAAAAAAAAAAAAAAAAm</p>
 <p>témoin déploiement</p>
@@ -21,7 +21,19 @@ version: 0.2.0-SNAPSHOT
 
 <h2>Pour provoquer des exceptiosn au choix</h2>
 
-<a href="./provocateur.jsp">Provocation no.1: NullPointer Exception</a>
+<ul>
+
+<li><a href="./provocateur.jsp">Provocation no.1: NullPointer Exception</a></li>
+
+<li><a href="/Provocation">Provocation no.2: une servlet qui fait réfénrenceJNDI au datasource configuré</a></li>
+
+<li><a href="/test-pur-jdbc.jsp">Provocation no.3: une jsp qui fait un pur appel JDBC</a></li>
+
+<li><a href="/test-jndi-jdbc.jsp">Provocation no.4: une servlet qui récupère une référence sur le Datasource "jdbc/organisactionDS", puis fait un appel SQL via le datasource</a></li>
+
+
+
+</ul>
 
 </body>
 </html>
