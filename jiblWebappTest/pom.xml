@@ -4,14 +4,14 @@
   <groupId>lasselle</groupId>
   <artifactId>jiblWebappTest</artifactId>
   <packaging>war</packaging>
-  <version>0.0.7-SNAPSHOT</version>
+  <version>0.0.8-SNAPSHOT</version>
   <name>jiblWebappTest Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
   <properties>
 <!--     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
-    <source.java.version>1.8</source.java.version>
-    <target.java.version>1.8</target.java.version>
+    <source.java.version>1.7</source.java.version>
+    <target.java.version>1.7</target.java.version>
   </properties>
   
   <dependencies>
@@ -20,7 +20,9 @@
 	<dependency>
 	    <groupId>javax.servlet</groupId>
 	    <artifactId>servlet-api</artifactId>
-	    <version>2.5</version>
+	    <version>3.0-alpha-1</version>
+<!-- 	    <version>2.5</version> -->
+	    
 	    <scope>provided</scope>
 	</dependency>
 	
@@ -83,7 +85,7 @@
 						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
 						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
 						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>*************</git-userpwd>
+						<git-userpwd>**************************</git-userpwd>
 						<!-- 
 						vous devez choisir un répertoire qui pourra être librement utilisé par le plugin maven
 						 -->

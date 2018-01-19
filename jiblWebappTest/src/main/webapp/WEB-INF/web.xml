@@ -4,6 +4,35 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>GestionnaireDexceptions</servlet-name>
+  	<display-name>GestionnaireDexceptions</display-name>
+  	<description></description>
+  	<servlet-class>gestion.exceptions.GestionnaireDexceptions</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GestionnaireDexceptions</servlet-name>
+  	<url-pattern>/GestionnaireDexceptions</url-pattern>
+  </servlet-mapping>
+  
+<!--   <error-page> -->
+<!--   	<error-code>404</error-code> -->
+<!--   	<location>/GestionnaireDexceptions</location> -->
+<!--   </error-page> -->
+
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/GestionnaireDexceptions</location>
+	</error-page>
+
+<!--   <error-page> -->
+<!-- 	  <exception-type>java.lang.Throwable</exception-type> -->
+<!-- 	  <location>/erreurs.jsp</location> -->
+<!--   </error-page> -->
+  
+  <!-- ++++++++++ -->
+  <!-- DATASOURCE -->
+  <!-- ++++++++++ -->
   
   <!-- Ajout de la référence au datasource configuré -->
   <!-- Pour générer cette configuration, il faut disposer du nom JNDI du datasource, et c'est tout -->

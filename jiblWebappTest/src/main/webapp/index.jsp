@@ -11,12 +11,17 @@
 <p>Dernier ajout de paragraphe juste pour tests dernier déploiement</p>
 <p>Aucun doute,c'est bien le dernier déploiement:</p>
 <p>
-version: 0.0.7-SNAPSHOT
+version: 0.0.8-SNAPSHOT
 </p>
 <p>PADAAAAAAAAAAAAAAAAAAAm</p>
 <p>témoin déploiement</p>
 
 
 <a href="./tests-datasources.jsp">Une page de test du datasource utilisé par cette application (re-déployé)</a>
+
+<h2>Pour provoquer des exceptiosn au choix</h2>
+
+<a href="./provocateur.jsp">Provocation no.1: NullPointer Exception</a>
+
 </body>
 </html>
