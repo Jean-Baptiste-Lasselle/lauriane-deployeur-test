@@ -1,152 +1,166 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>lasselle</groupId>
-  <artifactId>jiblWebappTest</artifactId>
-  <packaging>war</packaging>
-  <version>0.5.0-SNAPSHOT</version>
-  <name>jiblWebappTest Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  
-  <properties>
-<!--     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
-    <source.java.version>1.7</source.java.version>
-    <target.java.version>1.7</target.java.version>
-  </properties>
-  
-  <dependencies>
-  <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
-<!-- <dependency> -->
-<!--     <groupId>org.mariadb.jdbc</groupId> -->
-<!--     <artifactId>mariadb-java-client</artifactId> -->
-<!--     <version>1.1.7</version> -->
-<!-- </dependency> -->
-	<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
-	<dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>servlet-api</artifactId>
-	    <version>3.0-alpha-1</version>
-<!-- 	    <version>2.5</version> -->
-	    
-	    <scope>provided</scope>
-	</dependency>
-	
-	<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-	<dependency>
-	    <groupId>javax.servlet</groupId>
-	    <artifactId>jstl</artifactId>
-	    <version>1.2</version>
-	</dependency>
-	
-<!--     <dependency> -->
-<!--       <groupId>junit</groupId> -->
-<!--       <artifactId>junit</artifactId> -->
-<!--       <version>3.8.1</version> -->
-<!--       <scope>test</scope> -->
-<!--     </dependency> -->
-<!-- https://mvnrepository.com/artifact/junit/junit -->
-	<dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>4.12</version>
-	    <scope>test</scope>
-	</dependency>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>lasselle</groupId>
+	<artifactId>jiblWebappTest</artifactId>
+	<packaging>war</packaging>
+	<version>0.8.0-SNAPSHOT</version>
+	<name>jiblWebappTest Maven Webapp</name>
+	<url>http://maven.apache.org</url>
 
-  </dependencies>
-  <build>
-<!--     <finalName>jiblWebappTest</finalName> -->
-    <plugins>
-		<plugin>
-			  <groupId>lasselle</groupId>
-			  <artifactId>deployeur</artifactId>
-			  <version>0.0.1-SNAPSHOT</version>
-			<executions>
-				<execution>
-					<phase>install</phase>
-					<goals>
-						<goal>deploie</goal>
-					</goals>
-					<configuration>
-					
-						<!-- topologie de la cible de déploiement -->
-						
-						<!--  COMPOSANT SRV JEE -->
-						<!-- Cette configuration permet de définir quel est le 
-						     serveur jee dans lequel déployer le war buildé.
-						-->
-						<nom-conteneur-docker-srv-jee>ciblededeploiement-composant-srv-jee</nom-conteneur-docker-srv-jee>
-						<ip-cible-srv-jee>192.168.1.149</ip-cible-srv-jee>
-						<no-port-cible-srv-jee>12546</no-port-cible-srv-jee>
-						
-						<!--  COMPOSANT SGBDR -->
-						<!-- Cette configuration pourrait être utilisée pour mettre la BDD dans un état particulier, souhaité pour le déploiement
-						     puis laisser un script permettant de faire revenir la BDD dans son état initial, après la fin ds tests.
-						-->
-						<!-- Si le script de retour à l'état initial n'existe pas, il est créé en utilisant mysqldump -->
-						<!-- Si le script de retour à l'état initial existe, il est exécuté pour retour à l'état initial avant déploiement -->
-						
-<!-- 						<nom-conteneur-docker-sgbdr>ciblededeploiement-composant-sgbdr</nom-conteneur-docker-sgbdr> -->
-<!-- 						<ip-cible-sgbdr>192.168.1.149</ip-cible-sgbdr> -->
-<!-- 						<no-port-cible-sgbdr>4466</no-port-cible-sgbdr> -->
-						
-						
-						<!-- Utilisateur Linux opérateur du plugin -->
-						<lx-user>lauriane</lx-user>
-						<lx-pwd>lauriane</lx-pwd>
-						
-						<!-- repo git assistant du plugin -->
-						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
-						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
-						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>********</git-userpwd>
-						<!-- 
-						vous devez choisir un répertoire qui pourra être librement utilisé par le plugin maven
-						 -->
-						<repertoire-repo-git-local>C:\moi\mes_repos_git\tempmvnautobuild2</repertoire-repo-git-local>
-<!-- 						<repertoire-repo-git-local>C:\\moi\\mes_repos_git\\tempmvnautobuild</repertoire-repo-git-local> -->
-<!-- 						<repertoire-repo-git-local>C:\\moi\\mes_repos_git/tempmvnautobuild</repertoire-repo-git-local> -->
-						
-					</configuration>
-				</execution>
-			</executions>
-		</plugin>
+	<properties>
+		<!-- <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> -->
+		<source.java.version>1.7</source.java.version>
+		<target.java.version>1.7</target.java.version>
+	</properties>
 
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.7.0</version>
-			<configuration>
-				<source>${source.java.version}</source>
-				<target>${target.java.version}</target>
-			</configuration>
-		</plugin>
-		
-		
-		
-		
-    </plugins>
-    <pluginManagement>
-	    <plugins>
-	    	<plugin>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.mariadb.jdbc</groupId> -->
+		<!-- <artifactId>mariadb-java-client</artifactId> -->
+		<!-- <version>1.1.7</version> -->
+		<!-- </dependency> -->
+		<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>3.0-alpha-1</version>
+			<!-- <version>2.5</version> -->
+
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api --> <!-- API SLF4J -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple --> <!-- IMPLEMENTATIN "BINDéE" -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.7.25</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- <dependency> -->
+		<!-- <groupId>junit</groupId> -->
+		<!-- <artifactId>junit</artifactId> -->
+		<!-- <version>3.8.1</version> -->
+		<!-- <scope>test</scope> -->
+		<!-- </dependency> -->
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<!-- <finalName>jiblWebappTest</finalName> -->
+		<plugins>
+			<plugin>
+				<groupId>lasselle</groupId>
+				<artifactId>deployeur</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>deploie</goal>
+						</goals>
+						<configuration>
+
+							<!-- topologie de la cible de déploiement -->
+
+							<!-- COMPOSANT SRV JEE -->
+							<!-- Cette configuration permet de définir quel est le serveur jee 
+								dans lequel déployer le war buildé. -->
+							<nom-conteneur-docker-srv-jee>ciblededeploiement-composant-srv-jee</nom-conteneur-docker-srv-jee>
+							<ip-cible-srv-jee>192.168.1.149</ip-cible-srv-jee>
+							<no-port-cible-srv-jee>12546</no-port-cible-srv-jee>
+
+							<!-- COMPOSANT SGBDR -->
+							<!-- Cette configuration pourrait être utilisée pour mettre la BDD 
+								dans un état particulier, souhaité pour le déploiement puis laisser un script 
+								permettant de faire revenir la BDD dans son état initial, après la fin ds 
+								tests. -->
+							<!-- Si le script de retour à l'état initial n'existe pas, il est 
+								créé en utilisant mysqldump -->
+							<!-- Si le script de retour à l'état initial existe, il est exécuté 
+								pour retour à l'état initial avant déploiement -->
+
+							<!-- <nom-conteneur-docker-sgbdr>ciblededeploiement-composant-sgbdr</nom-conteneur-docker-sgbdr> -->
+							<!-- <ip-cible-sgbdr>192.168.1.149</ip-cible-sgbdr> -->
+							<!-- <no-port-cible-sgbdr>4466</no-port-cible-sgbdr> -->
+
+
+							<!-- Utilisateur Linux opérateur du plugin -->
+							<lx-user>lauriane</lx-user>
+							<lx-pwd>lauriane</lx-pwd>
+
+							<!-- repo git assistant du plugin -->
+							<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
+							<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
+							<git-username>Jean-Baptiste-Lasselle</git-username>
+							<git-userpwd>****</git-userpwd>
+							<!-- vous devez choisir un répertoire qui pourra être librement utilisé 
+								par le plugin maven -->
+							<repertoire-repo-git-local>C:\moi\mes_repos_git\tempmvnautobuild2</repertoire-repo-git-local>
+							<!-- <repertoire-repo-git-local>C:\\moi\\mes_repos_git\\tempmvnautobuild</repertoire-repo-git-local> -->
+							<!-- <repertoire-repo-git-local>C:\\moi\\mes_repos_git/tempmvnautobuild</repertoire-repo-git-local> -->
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
 				<configuration>
-					<archive>
+					<source>${source.java.version}</source>
+					<target>${target.java.version}</target>
+				</configuration>
+			</plugin>
+
+
+
+
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<configuration>
+						<archive>
 							<manifest>
 								<addClasspath>true</addClasspath>
 							</manifest>
-							
-	<!-- 					<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile> -->
-	<!-- 					<manifestFile>src/main/resources/jibl/customMANIFEST.MF</manifestFile> -->
-<!-- 							<manifestFile>src/main/resources/META-INF/customMANIFEST.MF</manifestFile> -->
-		
-	
-					</archive>
-					
-				</configuration>
-		
-			</plugin>
-	    </plugins>
-    </pluginManagement>
-  </build>
+
+							<!-- <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile> -->
+							<!-- <manifestFile>src/main/resources/jibl/customMANIFEST.MF</manifestFile> -->
+							<!-- <manifestFile>src/main/resources/META-INF/customMANIFEST.MF</manifestFile> -->
+
+
+						</archive>
+
+					</configuration>
+
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
