@@ -9,5 +9,8 @@
 </head>
 <body>
 <%=couche.acces.donnees.TestsJDBC.test2() %>
+
+<%=couche.acces.donnees.TestsJDBC.test4() %>
+
 </body>
 </html>
