@@ -1,6 +1,8 @@
 package couche.provocatrice;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
@@ -32,6 +34,15 @@ public class Provocation extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		Connection conn = null;
+		try {
+			conn = ds.getConnection();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			this.log("========================================== [JIBL-LOGGER DE LA SERVLET /Provocation]", e);
+		}
+		
 		response.getWriter().append("Oui, à priori, aucune erreur due au datasource {java:comp/env/jdbc/organisactionDS2} pour l'instant. ").append(request.getContextPath());
 	}
 

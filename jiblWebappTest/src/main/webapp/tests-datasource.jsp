@@ -1,11 +1,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="deri"%>
 
 <%-- <sql:query var="exemple1deselectionsql" dataSource="organisaction/SourceDeDonnees">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
 <%-- <sql:query var="exemple1deselectionsql" dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
 <%-- <sql:query var="exemple1deselectionsql" dataSource="java:comp/env/jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
-<%-- <sql:query var="exemple1deselectionsql"  dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
-
 
 <html>
 <head>
@@ -42,19 +40,37 @@
 	<!--     <td>eve-jackson@organisaction.org</td> -->
 	<!--   </tr> -->
 	<!-- </table>  -->
-	<p>traitement test</p>
-	<sql:setDataSource var="srcDeDonneesJibl"
-		driver="org.mariadb.jdbc.Driver"
-		url="jdbc:mariadb://192.168.1.149:8456/bdd_organisaction" user="root"
-		password="peuimporte" />
+	<p>traitement test transparent</p>
+	<%-- 	<sql:setDataSource var="srcDeDonneesJibl" --%>
+	<%-- 		driver="org.mariadb.jdbc.Driver" --%>
+	<%-- 		url="jdbc:mariadb://192.168.1.149:8456/bdd_organisaction" user="root" --%>
+	<%-- 		password="peuimporte" /> --%>
 
-	<sql:query dataSource="${srcDeDonneesJibl}"
-		var="enregistrementsRetournes">
-            SELECT * from bdd_organisaction.membresassoc;
-         </sql:query>
+	<%-- 	<sql:query dataSource="${srcDeDonneesJibl}" --%>
+	<%-- 		var="enregistrementsRetournes"> --%>
+	<!--             SELECT * from bdd_organisaction.membresassoc; -->
+	<%--          </sql:query> --%>
 
 
 	<p>données:</p>
+	<sql:query var="alors"
+		dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query>
+
+
+
+	<h4></h4>
+<!-- 	<h4>La variable exemple1deselectionsql rows</h4> -->
+	<p>
+<%-- 	<deri:out value="exemple1deselectionsql.rows"> --%>
+	<ul>
+	
+<%-- 		<li>${alors}</li> --%>
+<%-- 		<li>${alors.rows}</li> --%>
+	</ul>
+<%-- 	</deri:out> --%>
+	</p>
+
+	<h4>Tableau de données - alors</h4>
 
 	<table style="width: 100%">
 		<tr>
@@ -64,23 +80,17 @@
 			<th>Email</th>
 			<th>Username</th>
 		</tr>
-		<c:forEach var="enregistrementdetable"
-			items="${enregistrementsRetournes.rows}">
+
+		<deri:forEach var="enregistrementdetable"
+			items="${alors.rows}">
 			<tr>
 				<td>${enregistrementdetable.prenom}</td>
 				<td>${enregistrementdetable.nom}</td>
 				<td>${enregistrementdetable.age}</td>
 				<td>${enregistrementdetable.email}</td>
 				<td>${enregistrementdetable.username}</td>
-
 			</tr>
-
-			<%--     Foo ${enregistrementdetable.prenom}<br/> --%>
-			<%--     Bar ${enregistrementdetable.nom}<br/> --%>
-			<%--     Bar ${enregistrementdetable.age}<br/> --%>
-			<%--     Bar ${enregistrementdetable.email}<br/> --%>
-
-		</c:forEach>
+		</deri:forEach>
 	</table>
 
 	<p>--</p>
