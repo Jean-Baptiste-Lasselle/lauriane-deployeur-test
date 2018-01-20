@@ -11,13 +11,13 @@
 <p>Dernier ajout de paragraphe juste pour tests dernier déploiement</p>
 <p>Aucun doute,c'est bien le dernier déploiement:</p>
 <p>
-version: 0.6.0-SNAPSHOT
+version: 1.0.1-SNAPSHOT
 </p>
 <p>PADAAAAAAAAAAAAAAAAAAAm</p>
 <p>témoin déploiement</p>
 
 
-<a href="./tests-datasources.jsp">Une page de test du datasource utilisé par cette application (re-déployé)</a>
+<a href="./tests-datasource.jsp">Une page de test du datasource utilisé par cette application (re-déployé)</a>
 
 <h2>Pour provoquer des exceptiosn au choix (re-déployé)</h2>
 
