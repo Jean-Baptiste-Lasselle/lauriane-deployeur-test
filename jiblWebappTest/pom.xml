@@ -15,7 +15,12 @@
   </properties>
   
   <dependencies>
-  
+  <!-- https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
+<!-- <dependency> -->
+<!--     <groupId>org.mariadb.jdbc</groupId> -->
+<!--     <artifactId>mariadb-java-client</artifactId> -->
+<!--     <version>1.1.7</version> -->
+<!-- </dependency> -->
 	<!-- https://mvnrepository.com/artifact/javax.servlet/servlet-api -->
 	<dependency>
 	    <groupId>javax.servlet</groupId>
@@ -33,12 +38,20 @@
 	    <version>1.2</version>
 	</dependency>
 	
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
+<!--     <dependency> -->
+<!--       <groupId>junit</groupId> -->
+<!--       <artifactId>junit</artifactId> -->
+<!--       <version>3.8.1</version> -->
+<!--       <scope>test</scope> -->
+<!--     </dependency> -->
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+	<dependency>
+	    <groupId>junit</groupId>
+	    <artifactId>junit</artifactId>
+	    <version>4.12</version>
+	    <scope>test</scope>
+	</dependency>
+
   </dependencies>
   <build>
 <!--     <finalName>jiblWebappTest</finalName> -->
@@ -85,7 +98,7 @@
 						<url-repo-git-deploiements>https://github.com/Jean-Baptiste-Lasselle/lauriane-deploiement.git</url-repo-git-deploiements>
 						<nom-repo-git-deploiements>lauriane-deploiement</nom-repo-git-deploiements>
 						<git-username>Jean-Baptiste-Lasselle</git-username>
-						<git-userpwd>*******************</git-userpwd>
+						<git-userpwd>********</git-userpwd>
 						<!-- 
 						vous devez choisir un répertoire qui pourra être librement utilisé par le plugin maven
 						 -->
@@ -101,7 +114,7 @@
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-compiler-plugin</artifactId>
-	<!-- <version>3.7.0</version> -->
+			<version>3.7.0</version>
 			<configuration>
 				<source>${source.java.version}</source>
 				<target>${target.java.version}</target>
@@ -125,7 +138,7 @@
 							
 	<!-- 					<manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile> -->
 	<!-- 					<manifestFile>src/main/resources/jibl/customMANIFEST.MF</manifestFile> -->
-							<manifestFile>src/main/resources/META-INF/customMANIFEST.MF</manifestFile>
+<!-- 							<manifestFile>src/main/resources/META-INF/customMANIFEST.MF</manifestFile> -->
 		
 	
 					</archive>

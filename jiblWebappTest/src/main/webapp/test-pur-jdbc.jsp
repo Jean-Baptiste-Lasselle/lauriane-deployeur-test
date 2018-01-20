@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%=couche.acces.donnees.TestsJDBC.test2() %>
+<%=couche.acces.donnees.TestsJDBC.test1() %>
 </body>
 </html>

@@ -19,7 +19,7 @@ version: 0.5.0-SNAPSHOT
 
 <a href="./tests-datasources.jsp">Une page de test du datasource utilisé par cette application (re-déployé)</a>
 
-<h2>Pour provoquer des exceptiosn au choix</h2>
+<h2>Pour provoquer des exceptiosn au choix (re-déployé)</h2>
 
 <ul>
 
@@ -27,7 +27,8 @@ version: 0.5.0-SNAPSHOT
 
 <li><a href="/Provocation">Provocation no.2: une servlet qui fait réfénrenceJNDI au datasource configuré</a></li>
 
-<li><a href="/test-pur-jdbc.jsp">Provocation no.3: une jsp qui fait un pur appel JDBC</a></li>
+<!-- <li><a href="/test-pur-jdbc.jsp">Provocation no.3: une jsp qui fait un pur appel JDBC</a></li> -->
+<li><a href="/enfin.jsp">Provocation no.3: une jsp qui fait un pur appel JDBC (enfin)</a></li>
 
 <li><a href="/test-jndi-jdbc.jsp">Provocation no.4: une servlet qui récupère une référence sur le Datasource "jdbc/organisactionDS", puis fait un appel SQL via le datasource</a></li>
 
