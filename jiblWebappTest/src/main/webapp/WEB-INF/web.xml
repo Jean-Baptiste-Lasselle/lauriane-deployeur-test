@@ -65,6 +65,12 @@
 	      <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
 	</resource-env-ref>
 	
+	<resource-env-ref>
+	  <description>Connexion2AmaBDD</description>
+	      <resource-env-ref-name>jdbc/organisactionDS3</resource-env-ref-name>
+	      <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+	</resource-env-ref>
+	
 	<!-- le datasource réféerencé ci-dessous est construit par la configuration insérée dans le serveur
 	     tomcat dans $CATALINA_BASE/conf/context.xml -->
 	

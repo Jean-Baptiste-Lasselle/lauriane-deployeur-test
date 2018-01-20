@@ -3,7 +3,8 @@
 
 <%-- <sql:query var="exemple1deselectionsql" dataSource="organisaction/SourceDeDonnees">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
 <%-- <sql:query var="exemple1deselectionsql" dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
-<sql:query var="exemple1deselectionsql" dataSource="jdbc/organisactionDS">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query>
+<%-- <sql:query var="exemple1deselectionsql" dataSource="java:comp/env/jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
+<%-- <sql:query var="exemple1deselectionsql"  dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
 
 
 <html>
@@ -40,6 +41,15 @@
 <!--     <td>eve-jackson@organisaction.org</td> -->
 <!--   </tr> -->
 <!-- </table>  -->
+<p>traitement test</p>
+<sql:setDataSource var = "srcDeDonneesJibl" driver = "org.mariadb.jdbc.Driver"
+         url = "jdbc:mariadb://192.168.1.149:8456/bdd_organisaction"
+         user = "root"  password = "peuimporte"/>
+
+         <sql:query dataSource = "${srcDeDonneesJibl}" var = "enregistrementsRetournes">
+            SELECT * from bdd_organisaction.membresassoc;
+         </sql:query>
+
 
 <p>données:</p>
 
@@ -51,7 +61,7 @@
     <th>Email</th>
     <th>Username</th>    
   </tr>
-<c:forEach var="enregistrementdetable" items="${exemple1deselectionsql.rows}">
+<c:forEach var="enregistrementdetable" items="${enregistrementsRetournes.rows}">
   <tr>
     <td>${enregistrementdetable.prenom}</td>
     <td>${enregistrementdetable.nom}</td>

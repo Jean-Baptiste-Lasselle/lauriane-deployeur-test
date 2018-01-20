@@ -184,7 +184,11 @@ public static final java.lang.String 	ERROR_STATUS_CODE 		"javax.servlet.error.s
 		fluxEcrivain.append(sb.toString());
 		
 		// print stackTrace
+		fluxEcrivain.append(" ------------------------------------------------ STACKTRACE DE L'EXECPTION :");
 		lexecptionElleMeme.printStackTrace(fluxEcrivain);
+		fluxEcrivain.append(" ------------------------------------------------ MESSAGE DE L'EXECPTION :");
+		fluxEcrivain.append(lexecptionElleMeme.getMessage());
+		fluxEcrivain.append(" ------------------------------------------------ ---------------------- ");
 		
 		affichage = sb.toString();
 		
