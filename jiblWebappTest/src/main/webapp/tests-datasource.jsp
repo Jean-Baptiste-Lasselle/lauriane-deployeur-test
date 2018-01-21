@@ -10,7 +10,7 @@
 <title>Tests du DataSource Jee organisaction</title>
 </head>
 <body>
-	<h1>Cette page permet de réaliserr un certain nombre de tests du
+	<h1>Cette page permet de réaliser un certain nombre de tests du
 		DataSource</h1>
 
 	<h2>Test 1.</h2>
@@ -40,7 +40,7 @@
 	<!--     <td>eve-jackson@organisaction.org</td> -->
 	<!--   </tr> -->
 	<!-- </table>  -->
-	<p>traitement test transparent</p>
+<!-- 	<p>traitement test transparent</p> -->
 	<%-- 	<sql:setDataSource var="srcDeDonneesJibl" --%>
 	<%-- 		driver="org.mariadb.jdbc.Driver" --%>
 	<%-- 		url="jdbc:mariadb://192.168.1.149:8456/bdd_organisaction" user="root" --%>
@@ -52,25 +52,14 @@
 	<%--          </sql:query> --%>
 
 
-	<p>données:</p>
-	<sql:query var="alors"
-		dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query>
-
-
-
-	<h4></h4>
-<!-- 	<h4>La variable exemple1deselectionsql rows</h4> -->
-	<p>
-<%-- 	<deri:out value="exemple1deselectionsql.rows"> --%>
-	<ul>
+	<p>Données (nom table seule):</p>
+<%-- 	<sql:query var="donneesrecues"	dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM bdd_organisaction.membresassoc; </sql:query> --%>
+	<sql:query var="donneesrecues"	dataSource="jdbc/organisactionDS2">SELECT nom, prenom, age, email, username FROM membresassoc; </sql:query>
 	
-<%-- 		<li>${alors}</li> --%>
-<%-- 		<li>${alors.rows}</li> --%>
-	</ul>
-<%-- 	</deri:out> --%>
-	</p>
+		
 
-	<h4>Tableau de données - alors</h4>
+
+	<h4>Tableau de données - out</h4>
 
 	<table style="width: 100%">
 		<tr>
@@ -81,14 +70,13 @@
 			<th>Username</th>
 		</tr>
 
-		<deri:forEach var="enregistrementdetable"
-			items="${alors.rows}">
+		<deri:forEach var="enregistrementdetable" items="${donneesrecues.rows}">
 			<tr>
-				<td>${enregistrementdetable.prenom}</td>
-				<td>${enregistrementdetable.nom}</td>
-				<td>${enregistrementdetable.age}</td>
-				<td>${enregistrementdetable.email}</td>
-				<td>${enregistrementdetable.username}</td>
+				<td><deri:out value="${enregistrementdetable.nom}" /></td>
+				<td><deri:out value="${enregistrementdetable.prenom}" /></td>
+				<td><deri:out value="${enregistrementdetable.age}" /></td>
+				<td><deri:out value="${enregistrementdetable.email}" /></td>
+				<td><deri:out value="${enregistrementdetable.username}" /></td>
 			</tr>
 		</deri:forEach>
 	</table>
@@ -96,7 +84,7 @@
 	<p>--</p>
 
 	<h2>Test 2.</h2>
-	<p>ccc</p>
+	<p>TODO</p>
 
 </body>
 </html>

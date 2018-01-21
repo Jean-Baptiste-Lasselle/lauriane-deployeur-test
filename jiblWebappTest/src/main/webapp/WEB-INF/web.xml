@@ -42,17 +42,12 @@
   
   
   
-  <!-- ++++++++++ -->
-  <!-- ++++++++++ -->
-  <!-- DATASOURCE -->
-  <!-- ++++++++++ -->
-  <!-- ++++++++++ -->
+  <!-- +++++++++++++++++++++++++++++ -->
+  <!-- +++++++++++++++++++++++++++++ -->
+  <!-- DATASOURCE NIVEAU APPLICATION -->
+  <!-- +++++++++++++++++++++++++++++ -->
+  <!-- +++++++++++++++++++++++++++++ -->
   
-  
-  
-  
-  
-  <!-- Ajout de la référence au datasource configuré -->
   
   <!-- Pour générer cette configuration, il faut disposer du nom JNDI du datasource, et c'est tout -->
   
@@ -65,18 +60,20 @@
 	      <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
 	</resource-env-ref>
 	
-	<resource-env-ref>
-	  <description>Connexion2AmaBDD</description>
-	      <resource-env-ref-name>jdbc/organisactionDS3</resource-env-ref-name>
-	      <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
-	</resource-env-ref>
-	
+
+
+  <!-- +++++++++++++++++++++++++++++ -->
+  <!-- +++++++++++++++++++++++++++++ -->
+  <!-- DATASOURCE NIVEAU SERVEUR     -->
+  <!-- +++++++++++++++++++++++++++++ -->
+  <!-- +++++++++++++++++++++++++++++ -->
+
 	<!-- le datasource réféerencé ci-dessous est construit par la configuration insérée dans le serveur
-	     tomcat dans $CATALINA_BASE/conf/context.xml -->
+	     tomcat dans $CATALINA_BASE/conf/server.xml , section "<GlobalNamingResources></GlobalNamingResources>" -->
 	
   <resource-ref>
       <description>Connexion2AmaBDD</description>
-      <res-ref-name>jdbc/organisactionDS</res-ref-name>
+      <res-ref-name>jdbc/organisactionDS3</res-ref-name>
       <res-type>javax.sql.DataSource</res-type>
       <res-auth>Container</res-auth>
   </resource-ref>

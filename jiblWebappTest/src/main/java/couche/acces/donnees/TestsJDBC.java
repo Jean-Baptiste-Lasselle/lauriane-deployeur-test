@@ -89,6 +89,8 @@ public class TestsJDBC {
 		
 	}
 	private static String URI_JNID_DS = "java:comp/env/jdbc/organisactionDS2";
+	private static String URI_JNID_DS_SERVEUR = "java:comp/env/jdbc/organisactionDS3";
+	
 //	private static String URI_JNID_DS = "jdbc/organisactionDS2";
 //	private static String URI_JNID_DS = "jdbc/organisactionDS3";
 //	private static String URI_JNID_DS = "java:comp/env/jdbc/organisactionDS3"; ==>> lève une exception enfiiinnn
@@ -303,7 +305,119 @@ public class TestsJDBC {
 	
 	
 	
-	
+	/**
+	 * 
+	 * @return la liste des données
+	 * @throws NamingException
+	 * @throws SQLException
+	 */
+	public static String test5() throws NamingException, SQLException {
+		StringBuilder retour = new StringBuilder();
+		Context ctx = null;
+		try {
+			ctx = new InitialContext();
+		} catch (NamingException e1) {
+			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+			throw e1;
+		}
+		
+		DataSource ds = null;
+		try {
+			ds =(DataSource)ctx.lookup(URI_JNID_DS_SERVEUR);
+		} catch (NamingException e1) {
+			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+			throw e1;
+		}
+		
+		Connection connection = null;
+		
+		try {
+			connection = ds.getConnection();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+//			e1.printStackTrace();
+			throw e1;
+		}
+		
+//		try {
+//			connection = DriverManager.getConnection("jdbc:mariadb://192.168.1.149:8456/bdd_organisaction?user=root&password=peuimporte");
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		
+		Statement st = null;
+		
+		try {
+			st = connection.createStatement();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			throw e;
+		}
+		
+		ResultSet resultats= null;
+		try {
+			resultats= st.executeQuery("SELECT * FROM membresassoc;");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			throw e;
+		}
+		
+		
+		
+		while(resultats.next()) {
+			retour.append("<ul>");
+			retour.append("<li>");
+			retour.append("Prénom: ");
+			retour.append(resultats.getString("prenom"));
+			retour.append("</li>");
+			retour.append("<li>");
+			retour.append("Nom: ");
+			retour.append(resultats.getString("nom"));
+			retour.append("</li>");
+			retour.append("<li>");
+			retour.append("EMAIL: ");
+			retour.append(resultats.getString("email"));
+			retour.append("</li>");
+			retour.append("<li>");
+			retour.append("Utilisateur: ");
+			retour.append(resultats.getString("username"));
+			retour.append("</li>");
+			retour.append("<li>");
+			retour.append("Âge: ");
+			retour.append(resultats.getInt("age"));
+			retour.append("</li>");
+			retour.append("</ul>");
+		}
+		
+		
+		/**
+		 * Libération des ressources
+		 */
+		try {
+			st.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			throw e;
+		}
+		
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+			throw e;
+		}
+		
+		return "<p>test5(): Une connexion a été coorectement établie en utlisant le Datasource (configuré niveau serveur) de JNDI: {" + URI_JNID_DS_SERVEUR + "}</p>" + "<p>" + retour + "</p>";
+		
+		
+	}
 	
 	
 	
