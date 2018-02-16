@@ -44,14 +44,15 @@
 		<!-- Donc les "breadcrumbs", c'est un composant de menu pour te montrer à quelle profondeur tu es dans l'arbre de navigation du site web , sitemap.xml.... -->
 		</breadcrumbs>
 		<menu name="Overview">
-			<item name="Introduction" href="index.html" />
-			<item name="L'usine logicielle Jibl/Lauriane" href="http://www.usine-logicielle.com" />
-			<item name="Usage" href="usage.html" />
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="Introduction" href="index.html" />
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="L'usine logicielle Jibl/Lauriane" href="http://www.usine-logicielle.com" />
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="Usage" href="usage.html" />
 			<item name="Dépendances" href="dependencies.html" />
-			<item name="Infos Dépendances" href="dependencies.html" />
-			<item name="Convergence des Dépendances" href="dependency-convergence.html" />
-			<item name="Infos Dépendances" href="dependency-info.html" />
-			
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="Infos Dépendances" href="dependencies.html" />
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="Convergence des Dépendances" href="dependency-convergence.html" />
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="Infos Dépendances" href="dependency-info.html" />
+			<item img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" name="Résultats des tests" href="surefire-report.html" />
+<!-- 			<item name="auuuhhh" /> -->
 			
 			
 			
@@ -87,5 +88,6 @@
 <!-- 			<item name="Excluding Document Formats" href="http://www.usine-logicielle.com" /> -->
 <!-- 			<item name="Deploying to sourceforge.net" href="http://www.usine-logicielle.com" /> -->
 		</menu>
+		
 	</body>
 </project>
