@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Site internet du projet Jibl!!!" xmlns="http://maven.apache.org/DECORATION/1.6.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
+	<bannerLeft>
+		<name>Le super projet de Jibl!!!</name>
+		<!-- <src>http://maven.apache.org/images/apache-maven-project-2.png</src> -->
+		<src>http://images.vedura.fr/legume/haricot-vert+3002003.jpg</src>
+		<href>https://github.com/Jean-Baptiste-Lasselle</href>
+	</bannerLeft>
+
+	<bannerRight>
+		<src>http://www.dragonball-ultimate.com/wp-content/uploads/2013/07/kame-sennin-history.jpg</src>
+	</bannerRight>
+
+
+	<publishDate position="navigation-top" />
+	<!-- left, right, navigation-top, navigation-bottom, bottom -->
+	<!-- <publishDate position="left"/> -->
+	<!-- <publishDate position="right"/> -->
+	<!-- <publishDate position="navigation-bottom"/> -->
+	<!-- <publishDate position="bottom"/> -->
+
+
+	<version position="right" />
+	<!-- left, right, navigation-top, navigation-bottom, bottom -->
+	<!-- <publishDate position="left"/> -->
+	<!-- <publishDate position="right"/> -->
+	<!-- <publishDate position="navigation-bottom"/> -->
+	<!-- <publishDate position="bottom"/> -->
+
+	<poweredBy>
+		<logo name="Jibl" href="https://github.com/Jean-Baptiste-Lasselle"
+			img="http://www.dragonball-ultimate.com/wp-content/uploads/2013/07/kame-sennin-history.jpg" />
+	</poweredBy>
+	
+	<body>
+		<menu name="Overview">
+			<item name="Introduction" href="index.html" />
+			<item name="Goals" href="plugin-info.html" />
+			<item name="Usage" href="usage.html" />
+			<item name="FAQ" href="faq.html" />
+			<item name="History" href="history.html" />
+			<item name="Migrate" href="migrate.html" />
+			<item name="Maven 3" href="maven-3.html" />
+			<!-- According to https://issues.apache.org/jira/browse/MNGSITE-152 -->
+			<item name="License" href="http://www.apache.org/licenses/" />
+			<item name="Download" href="download.html" />
+		</menu>
+		<menu name="Configuration">
+			<item name="Internationalization" href="i18n.html" />
+			<item name="Site Descriptor"
+				href="../../doxia/doxia-sitetools/doxia-decoration-model/decoration.html" />
+		</menu>
+
+		<menu name="Examples">
+			<item name="Creating Content" href="/examples/creating-content.html" />
+			<item name="Configuring the Site Descriptor" href="/examples/sitedescriptor.html" />
+			<item name="Building a multi-module site" href="/examples/multimodule.html" />
+			<item name="Configuring Reports" href="/examples/configuring-reports.html" />
+			<item name="Configuring Site Run" href="/examples/siterun.html" />
+			<item name="Adding a Protocol to Deploy the Site" href="/examples/adding-deploy-protocol.html" />
+			<item name="Changing the Template File" href="/examples/templatefile.html" />
+			<item name="Creating Skins" href="/examples/creatingskins.html" />
+			<item name="Excluding Document Formats" href="/examples/moduleexcludes.html" />
+			<item name="Deploying to sourceforge.net" href="/examples/site-deploy-to-sourceforge.net.html" />
+		</menu>
+	</body>
+</project>

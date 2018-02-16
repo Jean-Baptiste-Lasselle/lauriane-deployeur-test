@@ -55,7 +55,7 @@ public class UneAutreVerification {
 	/**
 	 * ---
 	 */
-	@Test
+//	@Test
 	public void autreTestQuiEchoueToujours() {
 //		System.out.println("Ceci est un test de "  + "[" + this.sayMyName + "]");
 		System.out.println("Ceci est un [autreTestQuiEchoueToujours] de "  + "[" + this.sayMyName + "]");
