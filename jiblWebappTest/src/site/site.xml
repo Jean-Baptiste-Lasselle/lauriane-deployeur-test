@@ -35,17 +35,33 @@
 	</poweredBy>
 	
 	<body>
+		<breadcrumbs>
+		<item name="AhIlFautUnNamePourChaueItem" href="project-info.html" img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" position="center" title="Chtigidigidi!!!"/>
+		<item name="AhIlFautUnNamePourChaueItem" href="project-info.html" img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" position="center" title="Chtigidigidi!!!"/>
+		<item name="AhIlFautUnNamePourChaueItem" href="project-info.html" img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" position="center" title="Chtigidigidi!!!"/>
+		<item name="AhIlFautUnNamePourChaueItem" href="project-info.html" img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" position="center" title="Chtigidigidi!!!"/>
+		<item name="AhIlFautUnNamePourChaueItem" href="project-info.html" img="http://download.seaicons.com/icons/designbolts/cute-social/32/Hyves-icon.png" position="center" title="Chtigidigidi!!!"/>
+		<!-- Donc les "breadcrumbs", c'est un composant de menu pour te montrer à quelle profondeur tu es dans l'arbre de navigation du site web , sitemap.xml.... -->
+		</breadcrumbs>
 		<menu name="Overview">
 			<item name="Introduction" href="index.html" />
-			<item name="Goals" href="plugin-info.html" />
+			<item name="L'usine logicielle Jibl/Lauriane" href="http://www.usine-logicielle.com" />
 			<item name="Usage" href="usage.html" />
-			<item name="FAQ" href="faq.html" />
-			<item name="History" href="history.html" />
-			<item name="Migrate" href="migrate.html" />
-			<item name="Maven 3" href="maven-3.html" />
+			<item name="Dépendances" href="dependencies.html" />
+			<item name="Infos Dépendances" href="dependencies.html" />
+			<item name="Convergence des Dépendances" href="dependency-convergence.html" />
+			<item name="Infos Dépendances" href="dependency-info.html" />
+			
+			
+			
+			
+<!-- 			<item name="FAQ" href="faq.html" /> -->
+<!-- 			<item name="History" href="history.html" /> -->
+<!-- 			<item name="Migrate" href="migrate.html" /> -->
+<!-- 			<item name="Maven 3" href="maven-3.html" /> -->
 			<!-- According to https://issues.apache.org/jira/browse/MNGSITE-152 -->
-			<item name="License" href="http://www.apache.org/licenses/" />
-			<item name="Download" href="download.html" />
+<!-- 			<item name="License" href="http://www.apache.org/licenses/" /> -->
+<!-- 			<item name="Download" href="download.html" /> -->
 		</menu>
 		<menu name="Configuration">
 			<item name="Internationalization" href="i18n.html" />
@@ -53,17 +69,23 @@
 				href="../../doxia/doxia-sitetools/doxia-decoration-model/decoration.html" />
 		</menu>
 
-		<menu name="Examples">
-			<item name="Creating Content" href="/examples/creating-content.html" />
-			<item name="Configuring the Site Descriptor" href="/examples/sitedescriptor.html" />
-			<item name="Building a multi-module site" href="/examples/multimodule.html" />
-			<item name="Configuring Reports" href="/examples/configuring-reports.html" />
-			<item name="Configuring Site Run" href="/examples/siterun.html" />
-			<item name="Adding a Protocol to Deploy the Site" href="/examples/adding-deploy-protocol.html" />
-			<item name="Changing the Template File" href="/examples/templatefile.html" />
-			<item name="Creating Skins" href="/examples/creatingskins.html" />
-			<item name="Excluding Document Formats" href="/examples/moduleexcludes.html" />
-			<item name="Deploying to sourceforge.net" href="/examples/site-deploy-to-sourceforge.net.html" />
+		<menu name="Tutoriels Usine Jibl !!">
+			<item name="Tutoriel 1: configirer eclipse" href="http://www.usine-logicielle.com" />
+			<item name="Tutoriel 2: quelques commandes essentielles linux" href="http://www.usine-logicielle.com" />
+			<item name="Tutoriel 3: installer/configurer wildfly" href="http://www.usine-logicielle.com" />
+			<item name="Tutoriel 4: utiliser jboss-cli pour déployer dans wildfly" href="http://www.usine-logicielle.com" />
+			
+			
+			
+<!-- 			<item name="Configuring the Site Descriptor" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Building a multi-module site" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Configuring Reports" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Configuring Site Run" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Adding a Protocol to Deploy the Site" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Changing the Template File" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Creating Skins" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Excluding Document Formats" href="http://www.usine-logicielle.com" /> -->
+<!-- 			<item name="Deploying to sourceforge.net" href="http://www.usine-logicielle.com" /> -->
 		</menu>
 	</body>
 </project>
