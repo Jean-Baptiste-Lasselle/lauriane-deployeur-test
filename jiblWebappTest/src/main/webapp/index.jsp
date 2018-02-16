@@ -17,7 +17,7 @@
 <p>Que les re-déploiements sont bien effectifs au simple changement de code source de l'application, sans changer le numéro de version dans le pom.xml</p>
 <p>Aucun doute,c'est bien le dernier déploiement:</p>
 <p>
-version: 1.0.3-SNAPSHOT
+version: 1.0.5-SNAPSHOT
 </p>
 
 

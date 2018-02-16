@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -297,7 +298,7 @@ public class TestsJDBC {
 //			e.printStackTrace();
 			throw e;
 		}
-		
+
 		return "<p>test4(): Une connexion a été coorectement établie en utlisant le Datasource de JNDI: {" + URI_JNID_DS + "}</p>" + "<p>" + retour + "</p>";
 		
 		
